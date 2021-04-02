@@ -12,11 +12,11 @@ public class SwipingManager : MonoBehaviour {
 
     public GameObject suitorCardPrefab;
 
-    // public CharacterCardData bachelorCardData;
-    public CharacterCard bachelorCard;
-    // public CharacterCardData suitorCardData;
+    public BachelorCard bachelorCard;
     public SuitorCard suitorCard;
     public SuitorCard nextSuitorCard;
+
+    private bool accepted = false;
 
     // Start is called before the first frame update
     void Start() {
@@ -33,8 +33,9 @@ public class SwipingManager : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+        if (accepted) return;
+        
         if (Input.GetKeyDown(KeyCode.LeftArrow)) {
             Debug.Log("Match!");
             AcceptSuitor();
@@ -52,15 +53,17 @@ public class SwipingManager : MonoBehaviour {
         
         // UpdateCards();
         // set bachelor card
-        bachelorCard.SetCharacter(bachelor);
+        bachelorCard.SetAccepted();
+        // bachelorCard.SetCharacter(bachelor);
         // goodbye to old suitor card
-        Destroy(suitorCard.gameObject);
+        suitorCard.SetAccepted();
+        accepted = true;
         // hello to new suitor card
-        suitorCard = nextSuitorCard;
-        suitorCard.SetCharacter(suitor);
-        suitorCard.SetOnScreen();
-        // create the next suitor card
-        InstantiateNextSuitorCard();
+        // suitorCard = nextSuitorCard;
+        // suitorCard.SetCharacter(suitor);
+        // suitorCard.SetOnScreen();
+        // // create the next suitor card
+        // InstantiateNextSuitorCard();
     }
 
     private void RejectSuitor() {

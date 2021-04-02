@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 882241526826548156}
-  - component: {fileID: 6611903670880726602}
+  - component: {fileID: 7178097518096276900}
+  - component: {fileID: 7823447937331311220}
   m_Layer: 5
   m_Name: Bachelor Card
   m_TagString: Untagged
@@ -37,7 +38,26 @@ RectTransform:
   m_AnchoredPosition: {x: 160, y: 0}
   m_SizeDelta: {x: 260, y: 382}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6611903670880726602
+--- !u!95 &7178097518096276900
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5260935063884284067}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b7051395d77144e7b8a75a6700a3bb6e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7823447937331311220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,7 +66,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5260935063884284067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7176eda1b6404e15949d00e1632dbd7, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a287a7d792d4e7791b711793308c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cardData: {fileID: 7114790591779055494}

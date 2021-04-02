@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterCard : MonoBehaviour {
+public abstract class CharacterCard : MonoBehaviour {
     [SerializeField] private CharacterCardData cardData;
     
     // Start is called before the first frame update

@@ -361,7 +361,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 99f51ff23cf2c482d9e2243301e2b670, type: 2}
   - {fileID: 11400000, guid: 91ec5134764064e2b8deb3d4c91cf578, type: 2}
   suitorCardPrefab: {fileID: 285651356212613352, guid: 81fce8558d70d49f58be024d8cae04a9, type: 3}
-  bachelorCard: {fileID: 1435621359}
+  bachelorCard: {fileID: 8811765327687722107}
   suitorCard: {fileID: 18460925}
   nextSuitorCard: {fileID: 0}
 --- !u!4 &1189661819
@@ -378,17 +378,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1435621359 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6611903670880726602, guid: f9600e658b0f04425af11037a7bf958e, type: 3}
-  m_PrefabInstance: {fileID: 8811765327687722105}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7176eda1b6404e15949d00e1632dbd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1513992026
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,3 +722,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 882241526826548156, guid: f9600e658b0f04425af11037a7bf958e, type: 3}
   m_PrefabInstance: {fileID: 8811765327687722105}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8811765327687722107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7823447937331311220, guid: f9600e658b0f04425af11037a7bf958e, type: 3}
+  m_PrefabInstance: {fileID: 8811765327687722105}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a287a7d792d4e7791b711793308c4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
