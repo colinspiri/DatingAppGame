@@ -10,17 +10,26 @@ public class SwipingManager : MonoBehaviour {
     private Character suitor;
     private List<KeyValuePair<Character, Character>> matches;
 
+    public GameObject suitorCardPrefab;
+
+    // public CharacterCardData bachelorCardData;
     public CharacterCard bachelorCard;
-    public CharacterCard suitorCard;
-    
+    // public CharacterCardData suitorCardData;
+    public SuitorCard suitorCard;
+    public SuitorCard nextSuitorCard;
+
     // Start is called before the first frame update
     void Start() {
         matches = new List<KeyValuePair<Character, Character>>();
         
         // get starting bachelor and suitor
         bachelor = GetNextCharacter();
+        bachelorCard.SetCharacter(bachelor);
         suitor = GetNextCharacter();
-        UpdateCards();
+        suitorCard.SetCharacter(suitor);
+        suitorCard.SetOnScreen();
+        // create the next suitor card
+        InstantiateNextSuitorCard();
     }
 
     // Update is called once per frame
@@ -41,14 +50,31 @@ public class SwipingManager : MonoBehaviour {
         bachelor = GetNextCharacter();
         suitor = GetNextCharacter();
         
-        UpdateCards();
+        // UpdateCards();
+        // set bachelor card
+        bachelorCard.SetCharacter(bachelor);
+        // goodbye to old suitor card
+        Destroy(suitorCard.gameObject);
+        // hello to new suitor card
+        suitorCard = nextSuitorCard;
+        suitorCard.SetCharacter(suitor);
+        suitorCard.SetOnScreen();
+        // create the next suitor card
+        InstantiateNextSuitorCard();
     }
 
     private void RejectSuitor() {
         characterList.Add(suitor);
         suitor = GetNextCharacter();
         
-        UpdateCards();
+        // goodbye to old suitor card
+        suitorCard.SetRejected();
+        // hello to new suitor card
+        suitorCard = nextSuitorCard;
+        suitorCard.SetCharacter(suitor);
+        suitorCard.SetOnScreen();
+        // create the next suitor card
+        InstantiateNextSuitorCard();
     }
 
     private Character GetNextCharacter() {
@@ -62,8 +88,8 @@ public class SwipingManager : MonoBehaviour {
         return nextCharacter;
     }
 
-    private void UpdateCards() {
-        bachelorCard.SetCharacter(bachelor);
-        suitorCard.SetCharacter(suitor);
+    private void InstantiateNextSuitorCard() {
+        nextSuitorCard = Instantiate(suitorCardPrefab).GetComponent<SuitorCard>();
+        nextSuitorCard.transform.SetParent(suitorCard.transform.parent.transform, false);
     }
 }
