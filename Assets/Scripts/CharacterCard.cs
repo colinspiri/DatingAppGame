@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterCard : MonoBehaviour {
-    public Character character;
+    [SerializeField] private Character character;
 
     public Image profilePicture;
     public TextMeshProUGUI nameText;
@@ -15,20 +15,13 @@ public class CharacterCard : MonoBehaviour {
     public TextMeshProUGUI bioText;
     
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         UpdateCard();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void UpdateCard() {
         if (character == null) {
-            Debug.LogWarning("No character assigned for " + gameObject.name);
+            Debug.Log("No character assigned for " + gameObject.name);
             return;
         }
         
@@ -38,5 +31,10 @@ public class CharacterCard : MonoBehaviour {
         likesText.text = character.GetLikesAsFormattedString();
         dislikesText.text = character.GetDislikesAsFormattedString();
         bioText.text = character.bio;
+    }
+
+    public void SetCharacter(Character newCharacter) {
+        character = newCharacter;
+        UpdateCard();
     }
 }
