@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f403779fc7df7496d8420719b6ab540d, type: 3}
+  m_Name: Captain Heartblast
+  m_EditorClassIdentifier: 
+  characterName: Captain Heartblast
+  profilePicture: {fileID: 0}
+  bio: Hero in the streets, villain in the sheets
+  occupation: Professional lion-tamer, circus ringmaster, full-body painter (my body
+    is the brush)
+  likes:
+  - justice
+  - those little fruity drinks at night
+  dislikes:
+  - that scoundrel Dr. Venonmis
+  goodMatches: []
+  badMatches: []
