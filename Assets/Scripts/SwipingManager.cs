@@ -8,7 +8,7 @@ public class SwipingManager : MonoBehaviour {
 
     private Character bachelor;
     private Character suitor;
-    private List<KeyValuePair<Character, Character>> matches;
+    public Matches currentMatches;
 
     public GameObject suitorCardPrefab;
 
@@ -20,8 +20,6 @@ public class SwipingManager : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        matches = new List<KeyValuePair<Character, Character>>();
-        
         // get starting bachelor and suitor
         bachelor = GetNextCharacter();
         bachelorCard.SetCharacter(bachelor);
@@ -47,7 +45,7 @@ public class SwipingManager : MonoBehaviour {
     }
 
     private void AcceptSuitor() {
-        matches.Add(new KeyValuePair<Character, Character>(bachelor, suitor));
+        currentMatches.AddMatch(bachelor, suitor);
         bachelor = GetNextCharacter();
         suitor = GetNextCharacter();
         

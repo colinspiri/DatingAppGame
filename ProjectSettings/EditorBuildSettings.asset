@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SwipingScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MatchesSummaryScene.unity
+    guid: a3fda65bb605b42e38e7291260f7c1e3
+  - enabled: 1
+    path: Assets/Scenes/MatchDialogueScene.unity
+    guid: ffdc628ead23b435db19178a608e94cc
   m_configObjects: {}

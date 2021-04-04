@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour {
-    public Character bachelor;
-    public Character suitor;
+    public Matches currentMatches;
+    private List<string> conversation;
 
     public List<Message> messages;
 
@@ -12,7 +12,8 @@ public class DialogueManager : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        
+        conversation = currentMatches.GetCurrentMatch().GetConversation();
+        currentMatches.NextMatch();
     }
 
     // Update is called once per frame
@@ -25,9 +26,9 @@ public class DialogueManager : MonoBehaviour {
     }
 
     private void StartMessage(int messageIndex) {
-        Debug.Log("StartMessage(" + messageIndex + ")");
         Message message = messages[messageIndex];
-        message.StartTyping("hello there");
+        message.StartTyping(conversation[messageIndex]);
+        
         if (messageIndex + 1 < messages.Count) {
             message.onMessageSend += () => StartMessage(messageIndex + 1);
         }
