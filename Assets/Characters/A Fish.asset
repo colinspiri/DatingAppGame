@@ -23,5 +23,6 @@ MonoBehaviour:
   dislikes:
   - prolonged eye contact
   - sunburns
+  pickupLine: Glub glub glub
   goodMatches: []
   badMatches: []

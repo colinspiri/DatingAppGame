@@ -22,5 +22,6 @@ MonoBehaviour:
   - those little fruity drinks at night
   dislikes:
   - that scoundrel Dr. Venonmis
+  pickupLine: Hey baby!
   goodMatches: []
   badMatches: []

@@ -23,5 +23,7 @@ MonoBehaviour:
   - Dostoyevski
   dislikes:
   - loud music
+  pickupLine: Statistically speaking, we have a higher chance of connection if we
+    were to meet in person
   goodMatches: []
   badMatches: []

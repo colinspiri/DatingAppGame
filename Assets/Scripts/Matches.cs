@@ -16,11 +16,17 @@ public class Matches : ScriptableObject {
     public Match GetCurrentMatch() {
         return matches[index];
     }
-    public void NextMatch() {
+    public bool NextMatch() {
         index++;
+        return index >= matches.Count;
     }
 
     public List<Match> GetMatches() {
         return matches;
+    }
+
+    public void Reset() {
+        matches.Clear();
+        index = 0;
     }
 }

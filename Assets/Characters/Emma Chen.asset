@@ -21,6 +21,7 @@ MonoBehaviour:
   - cuddling
   - red wines
   dislikes:
-  - bugs (of any kind
+  - bugs (of any kind)
+  pickupLine: Hey, I'm new to this. Wanna hang out?
   goodMatches: []
   badMatches: []

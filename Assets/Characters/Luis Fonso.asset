@@ -23,5 +23,6 @@ MonoBehaviour:
   dislikes:
   - cheese pizza
   - Marvel movies
+  pickupLine: I know a really good local theater. They only ever play movies in 4:3.
   goodMatches: []
   badMatches: []

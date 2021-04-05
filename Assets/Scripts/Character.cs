@@ -14,6 +14,8 @@ public class Character : ScriptableObject {
     public List<string> likes;
     public List<string> dislikes;
 
+    public string pickupLine;
+
     public List<Character> goodMatches;
     public List<Character> badMatches;
 

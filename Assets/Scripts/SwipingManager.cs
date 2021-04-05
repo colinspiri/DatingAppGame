@@ -28,7 +28,7 @@ public class SwipingManager : MonoBehaviour {
         suitorCard.SetOnScreen();
         // create the next suitor card
         InstantiateNextSuitorCard();
-        currentMatches.matches.Clear();
+        currentMatches.Reset();
     }
 
     // Update is called once per frame
