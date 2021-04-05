@@ -11,7 +11,9 @@ public class SuitorCard : CharacterCard
     }
 
     private void Update() {
-        if(animator != null && animator.GetCurrentAnimatorStateInfo(0).IsName("OffScreen")) Destroy(gameObject);
+        if (animator != null) {
+            if(animator.GetCurrentAnimatorStateInfo(0).IsName("Destroy")) Destroy(gameObject);
+        }
     }
     
     public void SetOnScreen() {

@@ -361,6 +361,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 99f51ff23cf2c482d9e2243301e2b670, type: 2}
   - {fileID: 11400000, guid: 91ec5134764064e2b8deb3d4c91cf578, type: 2}
   currentMatches: {fileID: 11400000, guid: 61cc61c5645944799af4935888b9401e, type: 2}
+  bachelorCardPrefab: {fileID: 5260935063884284067, guid: f9600e658b0f04425af11037a7bf958e, type: 3}
   suitorCardPrefab: {fileID: 285651356212613352, guid: 81fce8558d70d49f58be024d8cae04a9, type: 3}
   bachelorCard: {fileID: 8811765327687722107}
   suitorCard: {fileID: 18460925}

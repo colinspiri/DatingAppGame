@@ -31,6 +31,7 @@ public class MatchesSummary : MonoBehaviour {
         foreach (Match match in currentMatches.GetMatches()) {
             text += "" + match.GetCharacters().Key.characterName + " matched with " +
                            match.GetCharacters().Value.characterName;
+            text += "\n";
         }
         matchesText.text = text;
     }
