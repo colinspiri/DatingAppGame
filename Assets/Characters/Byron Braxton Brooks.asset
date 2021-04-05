@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Byron Braxton Brooks
   m_EditorClassIdentifier: 
   characterName: Byron Braxton Brooks
-  profilePicture: {fileID: 0}
+  profilePicture: {fileID: 21300000, guid: 7956ca717ccce9e4ab3ef00fc1a1ff5f, type: 3}
   bio: Just a bear lookign for his paw-fect match
   occupation: Teddy bear (former mafia member) looking to settle down and live a
     civilian's life; now a bartender & campaign fellow
